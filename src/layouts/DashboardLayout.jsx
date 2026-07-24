@@ -1,0 +1,26 @@
+import Sidebar from "../components/sidebar/Sidebar";
+import Navbar from "../components/navbar/Navbar";
+
+function DashboardLayout({ children }) {
+  return (
+
+    <div className="flex h-screen bg-slate-100 dark:bg-gray-900 transition-colors duration-300">
+
+      <Sidebar />
+
+      <div className="flex flex-col flex-1">
+
+        <Navbar />
+
+        <main className="flex-1 p-6 overflow-y-auto text-gray-800 dark:text-white transition-colors duration-300">
+          {children}
+        </main>
+
+      </div>
+
+    </div>
+
+  );
+}
+
+export default DashboardLayout;
